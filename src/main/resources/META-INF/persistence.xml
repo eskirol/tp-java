@@ -6,6 +6,9 @@
     -->
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>com.mavha.cursos.java.app.jpa.modelo.Departamento</class>
+    <class>com.mavha.cursos.java.app.jpa.modelo.Empleado</class>
+    <class>com.mavha.cursos.java.app.jpa.modelo.Proyecto</class>
+    <class>com.mavha.cursos.java.app.jpa.modelo.Tarea</class>
     <properties>
       <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://DES3703\SQLEXPRESS:1433;databaseName=test"/>
