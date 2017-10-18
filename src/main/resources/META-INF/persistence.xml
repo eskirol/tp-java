@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="lab01" transaction-type="RESOURCE_LOCAL">
+    <!--
+    https://stackoverflow.com/questions/39410183/hibernate-5-2-2-no-persistence-provider-for-entitymanager
+    -->
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.mavha.cursos.java.app.jpa.modelo.Departamento</class>
+    <properties>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://DES3703\SQLEXPRESS:1433;databaseName=test"/>
+      <property name="javax.persistence.jdbc.user" value="sa"/>
+      <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+      <property name="javax.persistence.jdbc.password" value="admin"/>
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+    </properties>
+  </persistence-unit>
+</persistence>
